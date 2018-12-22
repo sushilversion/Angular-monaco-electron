@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild , AfterViewInit, ElementRef} from '@angular/core';
 import { MonacoFile } from 'ngx-monaco'
 
 @Component({
@@ -6,8 +6,10 @@ import { MonacoFile } from 'ngx-monaco'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   title = 'app';
+
+  @ViewChild('editor') editorContent: ElementRef;
 
   file: MonacoFile = {
     uri: 'index.js',
@@ -19,4 +21,12 @@ export class AppComponent {
     //handle file change
     console.log('File Change invoked');
   }
+
+  ngAfterViewInit() {
+    console.log('nfAfterview init');
+    console.log(this.editorContent);
+
+  }
+
+
 }
