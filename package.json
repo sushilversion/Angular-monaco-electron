@@ -1,7 +1,7 @@
 {
   "name": "angular-electron",
   "version": "0.0.0",
-  "main": "electron.js", 
+  "main": "electron.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,6 +24,9 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
+    "electron": "^4.0.0",
+    "monaco-editor": "^0.15.6",
+    "ngx-monaco": "^0.8.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
